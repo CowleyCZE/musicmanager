@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
-    <style name="Theme.MusicManager" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="android:statusBarColor">@color/purple_700</item>
+    <!-- Použijeme AppCompat jako stabilní základ pro manifest, Compose si UI přebere samo -->
+    <style name="Theme.MusicManager" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Prázdné, protože UI definujeme v Compose -->
     </style>
 </resources>
