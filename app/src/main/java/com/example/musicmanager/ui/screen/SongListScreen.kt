@@ -2,6 +2,7 @@ package com.example.musicmanager.ui.screen
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -22,7 +23,7 @@ import coil.compose.AsyncImage
 import com.example.musicmanager.data.model.Song
 import com.example.musicmanager.viewmodel.SongViewModel
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun SongListScreen(
     viewModel: SongViewModel,
@@ -86,6 +87,7 @@ fun SongListScreen(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SongRow(song: Song, onClick: () -> Unit, onLongClick: () -> Unit) {
     Card(
