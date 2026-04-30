@@ -35,7 +35,6 @@ fun PlayerBar(player: ExoPlayer) {
         onDispose { player.removeListener(listener) }
     }
 
-    // Simple ticker for position
     LaunchedEffect(isPlaying) {
         while (isPlaying) {
             currentPosition = player.currentPosition

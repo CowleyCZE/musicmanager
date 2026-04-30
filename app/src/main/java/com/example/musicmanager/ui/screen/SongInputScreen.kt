@@ -121,7 +121,7 @@ fun SongInputScreen(
                             }
                         )
                     }
-                    HorizontalDivider()
+                    Divider()
                     Row(
                         modifier = Modifier.padding(8.dp),
                         horizontalArrangement = Arrangement.spacedBy(8.dp)

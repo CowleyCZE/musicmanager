@@ -3,6 +3,7 @@ package com.example.musicmanager.di
 import android.content.Context
 import androidx.room.Room
 import com.example.musicmanager.data.dao.SongDao
+import com.example.musicmanager.data.dao.PlaylistDao
 import com.example.musicmanager.data.db.MusicDatabase
 import com.example.musicmanager.data.repository.SongRepository
 import dagger.Module
