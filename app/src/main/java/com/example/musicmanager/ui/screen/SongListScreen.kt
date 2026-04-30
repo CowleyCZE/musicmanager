@@ -85,12 +85,15 @@ fun SongListScreen(
 }
 
 @Composable
-fun SongRow(song: Song, onClick: () -> Unit) {
+fun SongRow(song: Song, onClick: () -> Unit, onLongClick: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 8.dp, vertical = 4.dp)
-            .clickable { onClick() },
+            .combinedClickable(
+                onClick = onClick,
+                onLongClick = onLongClick
+            ),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
@@ -110,5 +113,7 @@ fun SongRow(song: Song, onClick: () -> Unit) {
             }
             Icon(Icons.Default.PlayArrow, contentDescription = "Přehrát")
         }
+    }
+}
     }
 }
