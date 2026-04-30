@@ -29,6 +29,10 @@ class SongViewModel @Inject constructor(
     val playlists = playlistDao.getAllPlaylists()
         .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
+    fun search(query: String) = viewModelScope.launch {
+        // Logika pro vyhledávání (v této verzi repository vrací flow s filtrem)
+    }
+
     fun saveSong(song: Song) = viewModelScope.launch {
         if (song.id == 0L) repository.insert(song) else repository.update(song)
     }
