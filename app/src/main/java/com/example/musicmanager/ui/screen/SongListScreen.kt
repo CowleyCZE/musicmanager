@@ -2,7 +2,7 @@ package com.example.musicmanager.ui.screen
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -75,9 +75,11 @@ fun SongListScreen(
             )
             LazyColumn(modifier = Modifier.weight(1f)) {
                 items(songs) { song ->
-                    SongRow(song = song, onClick = {
-                        navController.navigate("detail/${song.id}")
-                    })
+                    SongRow(
+                        song = song,
+                        onClick = { navController.navigate("detail/${song.id}") },
+                        onLongClick = { navController.navigate("input?songId=${song.id}") }
+                    )
                 }
             }
         }
@@ -113,7 +115,5 @@ fun SongRow(song: Song, onClick: () -> Unit, onLongClick: () -> Unit) {
             }
             Icon(Icons.Default.PlayArrow, contentDescription = "Přehrát")
         }
-    }
-}
     }
 }
