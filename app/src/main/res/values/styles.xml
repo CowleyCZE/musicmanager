@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.MusicManager" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- Base application theme. -->
+    <style name="Theme.MusicManager" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorSecondary">@color/teal_200</item>
         <item name="android:statusBarColor">@color/purple_700</item>
